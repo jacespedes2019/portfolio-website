@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Jairo Cespedes – Portfolio</title>
-  <meta name="description" content="Portfolio of Jairo Adolfo Céspedes Plata – Mobile, Cloud & ML Engineer (Kotlin, Flutter, Angular)." />
+  <title>Jairo Céspedes – AI & Software Engineering Portfolio</title>
+  <meta name="description" content="Portfolio of Jairo Céspedes – AI & Software Engineer focused on machine learning systems, cloud infrastructure, computer vision, LLM workflows, and full-stack applications. Incoming USC MSCS-AI." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -38,7 +38,7 @@
     .card{background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow)}
     .card.pad{padding:24px}
     .title-xl{font-size:clamp(28px,3vw,42px);line-height:1.1;margin:0 0 8px}
-    .subtitle{color:var(--muted);margin:0 0 18px;font-size:15px}
+    .subtitle{color:var(--muted);margin:0 0 18px;font-size:15px;line-height:1.6}
 
     .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
     .btn{border:1px solid var(--border);background:#0f1626;color:var(--text);padding:12px 16px;border-radius:12px;cursor:pointer;font-weight:600;transition:transform .12s ease,box-shadow .12s ease}
@@ -47,26 +47,34 @@
     .btn.brand{background:var(--accent);color:#0b0f17;border:none}
     .btn.ghost{background:transparent}
 
-    .hero-photo{aspect-ratio:1/1;background:url('https://picsum.photos/640/640?random=100') center/cover no-repeat;border-radius:50%;border:6px solid var(--panel);box-shadow:var(--shadow)}
+    .hero-photo{aspect-ratio:1/1;background:url('images/me.jpeg') center/cover no-repeat;border-radius:50%;border:6px solid var(--panel);box-shadow:var(--shadow)}
 
     /* ======================= Sections ======================= */
     section{padding:28px 0} .section-title{font-size:22px;margin:0 0 16px}
-    .grid{display:grid;gap:18px} .grid.cols-3{grid-template-columns:repeat(3,1fr)} .grid.cols-2{grid-template-columns:repeat(2,1fr)}
-    @media (max-width:900px){.grid.cols-3,.grid.cols-2{grid-template-columns:1fr}}
+    .grid{display:grid;gap:18px} .grid.cols-3{grid-template-columns:repeat(3,1fr)} .grid.cols-2{grid-template-columns:repeat(2,1fr)} .grid.cols-4{grid-template-columns:repeat(4,1fr)}
+    @media (max-width:900px){.grid.cols-4,.grid.cols-3,.grid.cols-2{grid-template-columns:1fr}}
 
     .list{display:grid;gap:12px} .item{padding:16px;border-radius:14px;background:var(--panel);border:1px solid var(--border)}
     .item h4{margin:0 0 6px;font-size:16px} .item .meta{color:var(--muted);font-size:13px}
-    .item p{margin:8px 0 0;color:#cfd7e6;font-size:14px} [data-theme="light"] .item p{color:#334155}
+    .item p{margin:8px 0 0;color:#cfd7e6;font-size:14px;line-height:1.55} [data-theme="light"] .item p{color:#334155}
 
     .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px} .chip{background:var(--chip);border:1px solid var(--border);padding:6px 10px;border-radius:999px;font-size:12px;color:#c7d0e2} [data-theme="light"] .chip{color:#334155}
 
-    /* ======================= Projects (3-column grid) ======================= */
+    /* ======================= Impact strip ======================= */
+    .impact-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:18px}
+    .impact{background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:14px;padding:14px}
+    .impact strong{display:block;font-size:20px;margin-bottom:4px}
+    .impact span{color:var(--muted);font-size:13px}
+    @media (max-width:900px){.impact-strip{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:520px){.impact-strip{grid-template-columns:1fr}}
+
+    /* ======================= Projects ======================= */
     .projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
     @media (max-width:1000px){.projects-grid{grid-template-columns:repeat(2,1fr)}} @media (max-width:640px){.projects-grid{grid-template-columns:1fr}}
-    .project-card{position:relative;overflow:hidden;border-radius:14px;border:1px solid var(--border);background:var(--panel);box-shadow:var(--shadow);display:flex;flex-direction:column}
+    .project-card{position:relative;overflow:hidden;border-radius:14px;border:1px solid var(--border);background:var(--panel);box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .12s ease, box-shadow .12s ease}
     .project-card .thumb{aspect-ratio:16/10;background-size:cover;background-position:center}
     .project-card .content{padding:16px;display:flex;flex-direction:column;gap:10px}
-    .project-card h3{margin:0;font-size:16px} .project-card p{margin:0;color:#cfd7e6;font-size:14px;min-height:48px} [data-theme="light"] .project-card p{color:#334155}
+    .project-card h3{margin:0;font-size:16px} .project-card p{margin:0;color:#cfd7e6;font-size:14px;min-height:48px;line-height:1.5} [data-theme="light"] .project-card p{color:#334155}
     .project-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
     .project-card:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(0,0,0,.18)}
     .badge{position:absolute;top:10px;left:10px;background:var(--panel);border:1px solid var(--border);padding:6px 8px;border-radius:999px;font-size:12px;display:flex;gap:6px;align-items:center}
@@ -110,14 +118,23 @@
 
       <div class="hero-grid" style="margin-top: 28px;">
         <div class="card pad">
-          <h1 class="title-xl">Software Engineer – Mobile | Web | Cloud | ML</h1>
-          <p class="subtitle">Multidisciplinary Software Engineer with hands‑on experience across mobile (Kotlin/Flutter), front‑end (React/Vue/Angular), cloud engineering, and machine learning.</p>
+          <h1 class="title-xl">AI & Software Engineer</h1>
+          <p class="subtitle">Incoming M.S. in Computer Science – Artificial Intelligence at USC. I build production-ready AI solutions across machine learning systems, cloud infrastructure, computer vision, LLM workflows, and full-stack applications.</p>
 
           <div class="chips" aria-label="quick-facts">
-            <span class="chip">Bogotá, Colombia</span>
-            <span class="chip">Msc - Information Engineering</span>
-            <span class="chip">MSc GPA 4.6/5</span>
-            <span class="chip">Double BSc (Industrial and Systems engineer) – Cum Laude</span>
+            <span class="chip">Incoming USC MSCS-AI</span>
+            <span class="chip">AI / ML Systems</span>
+            <span class="chip">AWS · GCP · Docker</span>
+            <span class="chip">Computer Vision · LLMs · RAG</span>
+            <span class="chip">MSc Information Engineering · GPA 4.6/5</span>
+            <span class="chip">Double BSc · Cum Laude</span>
+          </div>
+
+          <div class="impact-strip" aria-label="career-impact">
+            <div class="impact"><strong>+35%</strong><span>forecasting accuracy improvement</span></div>
+            <div class="impact"><strong>3 days → 15 min</strong><span>reporting workflow reduction</span></div>
+            <div class="impact"><strong>70.4%</strong><span>mAP@50 in CV pipeline</span></div>
+            <div class="impact"><strong>4.7★</strong><span>COP16 official app rating</span></div>
           </div>
 
           <div class="hero-actions" style="margin-top: 16px;">
@@ -128,7 +145,7 @@
             <a class="btn ghost" href="mailto:jarcespla@outlook.com">Email</a>
           </div>
         </div>
-        <div class="hero-photo" style="background:url('images/me.jpeg') center/cover no-repeat;border-radius:50%;border:6px solid var(--panel);box-shadow:var(--shadow)"></div>
+        <div class="hero-photo" aria-label="Profile photo"></div>
       </div>
     </div>
   </header>
@@ -139,29 +156,30 @@
       <div class="container grid cols-2">
         <div class="card pad">
           <h2 class="section-title">About me</h2>
-          <p>Industrial Engineer and Systems Engineer (Uniandes) with an MSc in Information Engineering. I build end‑to‑end products at the intersection of <strong>applied ML</strong>, <strong>data analytics</strong>, and <strong>mobile/web engineering</strong>.</p>
+          <p>I am an AI & Software Engineer with experience building scalable cloud systems, AI-powered applications, and production-ready machine learning solutions across web, mobile, and data-driven platforms.</p>
           <ul class="list">
-            <li>Designed and led CV pipelines with <strong>YOLOv8</strong> & <strong>DETR</strong> for electrical infrastructure — dataset labeling, training, and <strong>AWS Fargate</strong> deployments with Roboflow.</li>
-            <li>Performed <strong>LAZ point‑cloud clustering</strong> and 3D visualization to support mapping and predictive modeling.</li>
-            <li>Built scalable mobile apps in <strong>Kotlin</strong>/ <strong>Flutter</strong> with <strong>SQLite</strong>, MVVM, and clean architecture.</li>
-            <li>Delivered React/Vue front‑ends with advanced <strong>Canvas</strong> interactions and visual tooling.</li>
+            <li>Designed and deployed <strong>computer vision pipelines</strong> using YOLOv8 and DETR for electrical infrastructure analysis, with real-time inference on <strong>AWS Fargate</strong>.</li>
+            <li>Built <strong>LLM-based workflows</strong> and RAG systems using LangChain, LangGraph, Ollama, Chroma, and OpenAI APIs.</li>
+            <li>Developed <strong>cloud analytics architectures</strong> using GCP, BigQuery, Cloud Functions, forecasting models, and Power BI dashboards.</li>
+            <li>Architected <strong>full-stack and mobile applications</strong> using React, Angular, Django, FastAPI, Kotlin, Flutter, and cloud-native services.</li>
           </ul>
           <div class="chips">
-            <span class="chip">Kotlin · Jetpack Compose · MVVM</span>
-            <span class="chip">Flutter · Dart</span>
-            <span class="chip">Angular · React · Vue</span>
-            <span class="chip">AWS · GCP</span>
-            <span class="chip">Python · SQL · R · Java</span>
-            <span class="chip">TensorFlow · FastAPI · Docker · Streamlit</span>
+            <span class="chip">Python</span>
+            <span class="chip">YOLOv8 · DETR</span>
+            <span class="chip">LangChain · LangGraph · Ollama</span>
+            <span class="chip">AWS Fargate · GCP · BigQuery</span>
+            <span class="chip">React · Angular · Django · FastAPI</span>
+            <span class="chip">Flutter · Kotlin</span>
           </div>
         </div>
         <div class="card pad">
-          <h2 class="section-title">What I'm seeking</h2>
-          <p>A graduate program centered on AI, software, and data, where I can push <strong>ML systems</strong> into production and translate analytics into measurable impact, while continuing to craft robust mobile/web UX.</p>
+          <h2 class="section-title">Current focus</h2>
+          <p>I am preparing to pursue an <strong>M.S. in Computer Science – Artificial Intelligence at the University of Southern California</strong>, with a focus on applied AI, ML systems, computer vision, and cloud-based AI products.</p>
           <ul class="list" style="margin-top: 10px;">
-            <li>Data‑driven mobile and web applications</li>
-            <li>ML models for decision support</li>
-            <li>Cloud architectures and automation</li>
+            <li>AI Engineering and ML Systems</li>
+            <li>Computer Vision and 3D/spatial analytics</li>
+            <li>LLM workflows, RAG, and AI agents</li>
+            <li>Cloud infrastructure and full-stack AI applications</li>
           </ul>
         </div>
       </div>
@@ -172,39 +190,13 @@
       <div class="container">
         <h2 class="section-title">Featured projects</h2>
         <div class="projects-grid">
-          <!-- Undergrad Thesis -->
-          <div class="project-card" data-modal="modal-thesis-bsc">
-            <div class="thumb" style="background-image:url('images/thesis.png');"></div>
-            <div class="content">
-              <h3>Undergrad Thesis – NLP & Montevideo Consensus</h3>
-              <p>Spanish‑language NLP mapping surveys to Montevideo agreements with BETO + clustering.</p>
-              <div class="project-actions">
-                <button class="btn brand" data-open="modal-thesis-bsc">Details</button>
-                <a class="btn" href="https://repositorio.uniandes.edu.co/entities/publication/f83474a4-2858-4889-a889-666ba63095aa" target="_blank" rel="noopener">Publication</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- MSc Project -->
-          <div class="project-card" data-modal="modal-msc">
-            <div class="thumb" style="background-image:url('images/ProyectoMine.png');"></div>
-            <div class="content">
-              <h3>MSc – Sales Analytics & Forecasting</h3>
-              <p>ETL SAP→BigQuery, time‑series forecasting, and Power BI dashboards for decision makers.</p>
-              <div class="project-actions">
-                <button class="btn brand" data-open="modal-msc">Details</button>
-                <a class="btn" href="https://www.canva.com/design/DAGmVKqEmKA/ZElebnMum3HzNw6chTGBQw/edit?utm_content=DAGmVKqEmKA&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" rel="noopener">Presentation</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- CV Pipelines -->
+          <!-- Computer Vision Pipelines -->
           <div class="project-card" data-modal="modal-cv">
             <div class="badge">mAP@50: <strong>70.4%</strong></div>
             <div class="thumb" style="background-image:url('images/Roboflow.png');"></div>
             <div class="content">
-              <h3>CV Pipelines – YOLOv8 / DETR + 3D LAZ</h3>
-              <p>Detection & height estimation, Fargate/Roboflow deployments, and 3D clustering analytics.</p>
+              <h3>Computer Vision Pipelines – YOLOv8 / DETR + 3D LAZ</h3>
+              <p>Production-oriented CV workflows for electrical infrastructure analysis with AWS Fargate inference and 3D LAZ clustering.</p>
               <div class="project-actions">
                 <button class="btn brand" data-open="modal-cv">Details</button>
               </div>
@@ -216,10 +208,23 @@
             <div class="thumb" style="background-image:url('images/Rag.png');"></div>
             <div class="content">
               <h3>Clinical RAG Platform</h3>
-              <p>ASR/OCR ingestion, entity extraction, Chroma vectors, JWT auth, Streamlit client.</p>
+              <p>Multimodal ingestion, embeddings, Chroma vectors, JWT auth, entity extraction, and Streamlit client for clinical data workflows.</p>
               <div class="project-actions">
                 <button class="btn brand" data-open="modal-rag">Details</button>
                 <a class="btn" href="https://github.com/jacespedes2019/ElSol-Challenge" target="_blank" rel="noopener">GitHub</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- MSc Project -->
+          <div class="project-card" data-modal="modal-msc">
+            <div class="thumb" style="background-image:url('images/ProyectoMine.png');"></div>
+            <div class="content">
+              <h3>MSc – Sales Analytics & Forecasting</h3>
+              <p>GCP pipeline for SAP data extraction, BigQuery processing, forecasting models, and Power BI dashboards.</p>
+              <div class="project-actions">
+                <button class="btn brand" data-open="modal-msc">Details</button>
+                <a class="btn" href="https://www.canva.com/design/DAGmVKqEmKA/ZElebnMum3HzNw6chTGBQw/edit?utm_content=DAGmVKqEmKA&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" rel="noopener">Presentation</a>
               </div>
             </div>
           </div>
@@ -228,11 +233,24 @@
           <div class="project-card" data-modal="modal-cop16">
             <div class="thumb" style="background-image:url('images/COP16_logo.jpg');"></div>
             <div class="content">
-              <h3>COP16 Official App (MinTIC)</h3>
-              <p>Agenda, content, notifications; offline‑first UX. Built by a team in ~2 months.</p>
+              <h3>COP16 Official App – MinTIC Colombia</h3>
+              <p>Official mobile app built with Flutter for iOS/Android, including agenda, content, notifications, and offline-first UX.</p>
               <div class="project-actions">
                 <button class="btn brand" data-open="modal-cop16">Details</button>
                 <a class="btn" href="https://play.google.com/store/apps/details?id=co.gov.mintic.cop162024&hl=es_CO&pli=1" target="_blank" rel="noopener">Play Store</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Undergrad Thesis -->
+          <div class="project-card" data-modal="modal-thesis-bsc">
+            <div class="thumb" style="background-image:url('images/thesis.png');"></div>
+            <div class="content">
+              <h3>Undergrad Thesis – NLP & Montevideo Consensus</h3>
+              <p>Spanish-language NLP pipeline mapping survey responses to policy agreements using BETO embeddings and clustering.</p>
+              <div class="project-actions">
+                <button class="btn brand" data-open="modal-thesis-bsc">Details</button>
+                <a class="btn" href="https://repositorio.uniandes.edu.co/entities/publication/f83474a4-2858-4889-a889-666ba63095aa" target="_blank" rel="noopener">Publication</a>
               </div>
             </div>
           </div>
@@ -241,25 +259,11 @@
           <div class="project-card" data-modal="modal-arapp">
             <div class="thumb" style="background-image:url('images/kotlin.jpg');"></div>
             <div class="content">
-              <h3>ARApp – Android AR (TFLite)</h3>
-              <p>ARCore/Sceneform + SSD‑MobileNet, gyro‑driven 3D cube, color picker, >80% tests.</p>
+              <h3>ARApp – Android AR + TFLite</h3>
+              <p>ARCore/Sceneform application with on-device object detection, MVVM architecture, and interactive 3D visualization.</p>
               <div class="project-actions">
                 <button class="btn brand" data-open="modal-arapp">Details</button>
                 <a class="btn" href="https://github.com/jacespedes2019/arapp" target="_blank" rel="noopener">GitHub</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- TutorYa -->
-          <div class="project-card" data-modal="modal-tutorya">
-            <div class="thumb" style="background-image:url('images/tutorya.png');"></div>
-            <div class="content">
-              <h3>TutorYa – Flutter</h3>
-              <p>Matching platform for students & tutors; Android codebase + research wiki.</p>
-              <div class="project-actions">
-                <button class="btn brand" data-open="modal-tutorya">Details</button>
-                <a class="btn" href="https://gitlab.com/isis3510_202310_35/flutter/-/tree/main/tutorya/android/app/src?ref_type=heads" target="_blank" rel="noopener">GitLab</a>
-                <a class="btn" href="https://gitlab.com/isis3510_202310_35/wiki" target="_blank" rel="noopener">Wiki</a>
               </div>
             </div>
           </div>
@@ -272,11 +276,55 @@
       <div class="container">
         <h2 class="section-title">Experience</h2>
         <div class="grid cols-2">
-          <div class="item"><h4>Software Engineer – Mobile | Cloud | ML · Cal Technology Solutions</h4><div class="meta">Georgia, USA · Dec 2024 – Present</div><p>Multidisciplinary Software Engineer with hands-on experience across mobile (Kotlin/Flutter), front-end (React/Vue/Angular), cloud engineering, and machine learning.</p></div>
-          <div class="item"><h4>Mobile Developer · Tecnofactory S.A.S – BIC</h4><div class="meta">Bogotá · Aug 2024 – Dec 2024</div><p>Flutter/KMP for iOS & Android; UX improvements, performance tuning; multilingual features.</p></div>
-          <div class="item"><h4>Technology Business Analyst · Tecnofactory S.A.S – BIC</h4><div class="meta">Bogotá · Jul 2024 – Dec 2024</div><p>Led tech initiatives to optimize processes and increase revenue; commercial support and market analysis.</p></div>
-          <div class="item"><h4>Front‑end Developer (Graduate Assistant) · Universidad de los Andes</h4><div class="meta">Bogotá · Jan 2024 – Jan 2025</div><p>Angular for the Digital Transformation Directorate; features for the Course Conflict System.</p></div>
-          <div class="item"><h4>Teaching Assistant · Universidad de los Andes</h4><div class="meta">Bogotá · Jan – Dec 2023</div><p>Supported Mobile Apps, Data Structures/Algorithms, and Web Apps; mentoring and code reviews.</p></div>
+          <div class="item">
+            <h4>AI & Software Engineer – Cloud | Full-Stack · Cal Technology Solutions</h4>
+            <div class="meta">Alpharetta, Georgia · Dec 2024 – Present</div>
+            <p>Led end-to-end computer vision pipelines using YOLOv8 and DETR, deployed real-time inference systems on AWS Fargate, integrated Django APIs, and developed 3D LAZ point-cloud analytics for infrastructure mapping.</p>
+          </div>
+          <div class="item">
+            <h4>Teaching Assistant – Business Analytics · Universidad de los Andes</h4>
+            <div class="meta">Bogotá · Dec 2025 – Present</div>
+            <p>Supported graduate-level students in applying analytics, machine learning, and AI-driven decision-making techniques. Guided LLM-based agents and AI solutions using LangChain, LangGraph, Ollama, and RAG architectures.</p>
+          </div>
+          <div class="item">
+            <h4>Mobile Developer / Technology Business Analyst · Tecnofactory S.A.S – BIC</h4>
+            <div class="meta">Bogotá · Aug 2024 – Dec 2024</div>
+            <p>Built AI agents using Python and OpenAI APIs for document analysis, information extraction, and proposal automation. Developed Flutter and Kotlin apps for iOS/Android with a focus on usability and performance.</p>
+          </div>
+          <div class="item">
+            <h4>Front-end Developer & Teaching Assistant · Universidad de los Andes</h4>
+            <div class="meta">Bogotá · Jan 2023 – Jan 2025</div>
+            <p>Developed Angular features for the Scheduling Conflict System and supported students in Mobile App Development, Data Structures & Algorithms, and Web Development using Python, Java, and React.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== EDUCATION ======================== -->
+    <section id="education">
+      <div class="container">
+        <h2 class="section-title">Education</h2>
+        <div class="grid cols-2">
+          <div class="item">
+            <h4>M.S. in Computer Science – Artificial Intelligence · University of Southern California</h4>
+            <div class="meta">Los Angeles, CA · Expected May 2028</div>
+            <p>Incoming graduate student focused on AI engineering, ML systems, computer vision, cloud infrastructure, and full-stack AI applications.</p>
+          </div>
+          <div class="item">
+            <h4>MSc in Information Engineering · Universidad de los Andes</h4>
+            <div class="meta">Bogotá · 2025 · GPA 4.6/5 · Ranked 2nd out of 19</div>
+            <p>Focused on <strong>Machine Learning, Artificial Intelligence, and Cloud Computing</strong>. Key courses include Applied Data Science, Deep Learning Analysis, Machine Learning Analysis, Recommendation Systems, Cloud Solutions Development, Big Data, and Business Analytics.</p>
+          </div>
+          <div class="item">
+            <h4>BSc in Systems and Computer Engineering · Universidad de los Andes</h4>
+            <div class="meta">Bogotá · 2024 · GPA 4.5/5 · Cum Laude</div>
+            <p>Strong background in computer science, algorithms, software architecture, transactional systems, business intelligence, web/mobile development, and AI systems.</p>
+          </div>
+          <div class="item">
+            <h4>BSc in Industrial Engineering · Universidad de los Andes</h4>
+            <div class="meta">Bogotá · 2024 · GPA 4.5/5 · Cum Laude</div>
+            <p>Focused on quantitative analysis, optimization, probability, statistics, financial engineering, decision systems, and business analytics.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -285,68 +333,25 @@
     <section id="awards">
       <div class="container">
         <h2 class="section-title">Awards</h2>
-        <div class="grid cols-1">
-        <div class="item">
-        <h4>Cum Laude Distinction –Bachelor’s in Systems Engineering (Uniandes)</h4>
-        <div class="meta">April 2024 · Associated with Universidad de los Andes – Colombia</div>
-        <p>Recognition for outstanding academic performance, graduating within the top 3% of the historical average of graduates at Universidad de los Andes. 
-      </div>
-      <div class="item">
-        <h4>Cum Laude Distinction – Bachelor’s in Industrial Engineering (Uniandes)</h4>
-        <div class="meta">April 2024 · Associated with Universidad de los Andes – Colombia</div>
-        <p>Recognition for academic excellence, awarded to students within the top 3% of the historical average of graduates at Universidad de los Andes. 
-      </div>
-        <div class="item">
-          <h4>First place – Semana de la Innovación, Computer & Systems Engineering (Uniandes)</h4>
-          <div class="meta">June 2022 · Associated with Universidad de los Andes – Colombia</div>
-          <p><strong>SensorInv</strong>: proposal to use sensor networks to estimate inventory levels in grain silos for mills, enabling real‑time control, loss reduction, and safety monitoring. Video: <a href="https://youtu.be/SBoSns7XY-Y" target="_blank" rel="noopener">https://youtu.be/SBoSns7XY-Y</a></p>
-        </div>
+        <div class="grid cols-3">
+          <div class="item">
+            <h4>Cum Laude Distinction – Systems Engineering</h4>
+            <div class="meta">Universidad de los Andes · April 2024</div>
+            <p>Recognition for academic excellence, awarded for graduating within the top 3% historical GPA benchmark.</p>
+          </div>
+          <div class="item">
+            <h4>Cum Laude Distinction – Industrial Engineering</h4>
+            <div class="meta">Universidad de los Andes · April 2024</div>
+            <p>Recognition for academic excellence, awarded for graduating within the top 3% historical GPA benchmark.</p>
+          </div>
+          <div class="item">
+            <h4>First Place – Semana de la Innovación</h4>
+            <div class="meta">Computer & Systems Engineering · June 2022</div>
+            <p><strong>SensorInv</strong>: sensor-network proposal for real-time inventory estimation in grain silos, improving control, loss prevention, and safety monitoring.</p>
+          </div>
         </div>
       </div>
     </section>
-
-    <!-- ======================== EDUCATION ======================== -->
-    <section id="education">
-  <div class="container">
-    <h2 class="section-title">Education</h2>
-    <div class="grid cols-3">
-
-      <div class="item">
-        <h4>MSc in Information Engineering · Universidad de los Andes</h4>
-        <div class="meta">Bogotá · 2025 · GPA 4.6/5 </div>
-        <p>
-          Focused on <strong>Machine Learning, Artificial Intelligence, and Cloud Computing</strong>. 
-          Key courses: <em>Applied Data Science, Deep Learning Analysis, Machine Learning Analysis, Recommendation Systems, 
-          Cloud Solutions Development, Information Analysis on Big Data, Business Analytics</em>, and <em>Final Project</em>.
-        </p>
-      </div>
-
-      <div class="item">
-        <h4>BSc in Industrial Engineering · Universidad de los Andes</h4>
-        <div class="meta">Bogotá · 2024 · GPA 4.5/5 · Cum Laude (top 3 % historical average)</div>
-        <p>
-          Emphasis on <strong>Probability, Statistics, and Quantitative Analysis</strong>. 
-          Relevant courses: <em>Probability and Statistics I–II, Statistical Learning for Data Analytics, Financial Engineering, 
-          Risk Management, Systems Dynamics</em>, and <em>Optimization Principles</em>. 
-          Graduated within the top 3 % historical average.
-        </p>
-      </div>
-
-      <div class="item">
-        <h4>BSc in Systems and Computer Engineering · Universidad de los Andes</h4>
-        <div class="meta">Bogotá · 2024 · GPA 4.5/5 · Cum Laude (top 3 % historical average)</div>
-        <p>
-          Strong background in <strong>Computer Science, Software Engineering, and AI systems</strong>. 
-          Core subjects: <em>Algorithms and Data Structures, Software Architecture, Transactional Systems, 
-          Business Intelligence, Web and Mobile Development</em>, and <em>Network Design</em>. 
-          Recognition for academic excellence within the top 3 % historical GPA.
-        </p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
 
     <!-- ======================== SKILLS & CERTS ======================== -->
     <section id="skills">
@@ -354,30 +359,26 @@
         <div class="card pad">
           <h2 class="section-title">Skills</h2>
           <div class="chips">
-            <span class="chip">Kotlin</span><span class="chip">Jetpack Compose</span><span class="chip">MVVM</span>
-            <span class="chip">Flutter/Dart</span><span class="chip">Angular</span><span class="chip">React</span><span class="chip">Vue</span>
-            <span class="chip">Python</span><span class="chip">SQL</span><span class="chip">R</span><span class="chip">Java</span>
-            <span class="chip">TensorFlow</span><span class="chip">FastAPI</span><span class="chip">Docker</span><span class="chip">Streamlit</span>
-            <span class="chip">Power BI</span><span class="chip">NLP</span><span class="chip">Spark/Sedona</span><span class="chip">AWS</span><span class="chip">GCP</span>
+            <span class="chip">Python</span><span class="chip">Java</span><span class="chip">Kotlin</span><span class="chip">Flutter</span>
+            <span class="chip">JavaScript</span><span class="chip">React</span><span class="chip">Angular</span><span class="chip">Vue</span>
+            <span class="chip">Django</span><span class="chip">FastAPI</span><span class="chip">SQL</span><span class="chip">R</span>
+            <span class="chip">YOLOv8</span><span class="chip">DETR</span><span class="chip">Transformers</span><span class="chip">HuggingFace</span>
+            <span class="chip">LangChain</span><span class="chip">LangGraph</span><span class="chip">Ollama</span><span class="chip">RAG</span>
+            <span class="chip">AWS Fargate</span><span class="chip">GCP</span><span class="chip">BigQuery</span><span class="chip">Vertex AI</span>
+            <span class="chip">Docker</span><span class="chip">Spark</span><span class="chip">Scikit-learn</span><span class="chip">pgvector</span>
           </div>
         </div>
         <div class="card pad" id="certs" style="margin-top: 28px;">
           <h2 class="section-title">Certifications</h2>
           <ul class="list">
-            <li class="item"><h4>TOEFL iBT 99/120 (C1 English)</h4><div class="meta">Issued Oct 2025 · Expires Oct 2027 · Credential ID available on request</div></li>
+            <li class="item"><h4>TOEFL iBT 99/120 (C1 English)</h4><div class="meta">Issued Oct 2025 · Expires Oct 2027 · Credential available on request</div></li>
             <li class="item"><h4><a href="https://www.credly.com/badges/c36710e9-0c62-4703-bdb8-61585b5cd85a/linked_in_profile" target="_blank" rel="noopener">Create ML Models with BigQuery ML – Skill Badge</a></h4><div class="meta">Google Cloud · Sep 2025</div></li>
             <li class="item"><h4><a href="https://www.credly.com/badges/7c5bb008-0055-4a12-a144-372c4c486647/linked_in_profile" target="_blank" rel="noopener">Engineer Data for Predictive Modeling with BigQuery ML – Skill Badge</a></h4><div class="meta">Google Cloud · Sep 2025</div></li>
-            <li class="item"><h4><a href="https://www.credly.com/badges/cb53bb5c-76a6-43a4-bbe1-3fbb7cb867c9/linked_in_profile" target="_blank" rel="noopener">Build a Secure Google Cloud Network – Skill Badge</a></h4><div class="meta">Google Cloud · Jun 2025</div></li>
             <li class="item"><h4><a href="https://www.credly.com/badges/8838ea81-6b49-4e49-a3e4-c445549f94b4/linked_in_profile" target="_blank" rel="noopener">Google Cloud Computing Foundations Certificate</a></h4><div class="meta">Google · Jun 2025</div></li>
-            <li class="item"><h4><a href="https://www.credly.com/badges/8bcf3e28-2f27-4d4e-b724-dca8c5e83a06/linked_in_profile" target="_blank" rel="noopener">Prepare Data for ML APIs on Google Cloud – Skill Badge</a></h4><div class="meta">Google Cloud · Jun 2025</div></li>
-            <li class="item"><h4><a href="https://www.credly.com/badges/536be54d-da6b-49bf-93d0-96c90a2f1b69/linked_in_profile" target="_blank" rel="noopener">Implement Load Balancing on Compute Engine – Skill Badge</a></h4><div class="meta">Google Cloud · May 2025</div></li>
-            <li class="item"><h4><a href="https://www.credly.com/badges/fa2c79cf-d1b0-4202-b463-6e86fabfa4e8/linked_in_profile" target="_blank" rel="noopener">Set Up an App Dev Environment on Google Cloud – Skill Badge</a></h4><div class="meta">Google Cloud · May 2025</div></li>
             <li class="item"><h4><a href="https://www.credly.com/badges/fe67f0ce-453c-45b9-afc3-684f0b1b075c/linked_in_profile" target="_blank" rel="noopener">Prompt Design in Vertex AI – Skill Badge</a></h4><div class="meta">Google · Apr 2025</div></li>
             <li class="item"><h4><a href="https://www.credly.com/badges/93132fea-0d7c-4bdd-aa73-0a9c827cfa88/linked_in_profile" target="_blank" rel="noopener">AWS Academy Graduate – Cloud Developing</a></h4><div class="meta">AWS · May 2024</div></li>
             <li class="item"><h4><a href="https://www.credly.com/badges/f5431f33-0260-4d73-b1d0-cf594b8d14c5/linked_in_profile" target="_blank" rel="noopener">AWS Academy Graduate – Cloud Foundations</a></h4><div class="meta">AWS · Feb 2024</div></li>
-            <li class="item"><h4><a href="https://coursera.org/share/fe93ab2f1473586dc07489ba5cc63d2a" target="_blank" rel="noopener">Capital Markets & Portfolio</a></h4><div class="meta">Coursera · Apr 2022</div></li>
           </ul>
-          <p class="subtitle">Note: All credentials above include a verification link except TOEFL (C1), which can be shared upon request.</p>
         </div>
       </div>
     </section>
@@ -390,14 +391,14 @@
           <div><strong>Email:</strong> <a href="mailto:jarcespla@outlook.com">jarcespla@outlook.com</a></div>
           <div><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/jairo-cespedes1" target="_blank" rel="noopener">linkedin.com/in/jairo-cespedes1</a></div>
           <div><strong>GitHub:</strong> <a href="https://github.com/jacespedes2019" target="_blank" rel="noopener">github.com/jacespedes2019</a></div>
-          <div><strong>Phone (CO):</strong> +57 316 623 9797</div>
+          <div><strong>Phone:</strong> +57 316 623 9797</div>
         </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="container">© <span id="y"></span> Jairo Cespedes · Built with HTML/CSS · Hosted on GitHub Pages</div>
+    <div class="container">© <span id="y"></span> Jairo Céspedes · AI & Software Engineering Portfolio · Hosted on GitHub Pages</div>
   </footer>
 
   <!-- ======================= Modals ======================= -->
@@ -405,8 +406,8 @@
     <div class="modal-dialog">
       <div class="modal-header"><h3>Undergrad Thesis – NLP for Surveys & Montevideo Consensus</h3><button class="close" data-close>Close</button></div>
       <div class="modal-body">
-        <p>Spanish‑specific NLP pipeline to analyze open‑ended survey responses and map them to the <em>Montevideo Consensus</em> agreements. We used <strong>BETO</strong> embeddings and clustering (K‑means / Fuzzy C‑means) to discover themes, with an explainable UI and ethical safeguards (bias checks, privacy considerations).</p>
-        <div class="chips"><span class="chip">Python</span><span class="chip">Transformers (BETO)</span><span class="chip">K‑means</span><span class="chip">Fuzzy C‑means</span></div>
+        <p>Spanish-language NLP pipeline to analyze open-ended survey responses and map them to the <em>Montevideo Consensus</em> agreements. The system used <strong>BETO transformer embeddings</strong> and clustering methods such as K-means and Fuzzy C-means to discover themes, with an explainable UI and ethical safeguards around bias and privacy.</p>
+        <div class="chips"><span class="chip">Python</span><span class="chip">BETO</span><span class="chip">Transformers</span><span class="chip">K-means</span><span class="chip">Fuzzy C-means</span><span class="chip">Explainable AI</span></div>
         <div class="project-actions" style="margin-top:12px;"><a class="btn brand" href="https://repositorio.uniandes.edu.co/entities/publication/f83474a4-2858-4889-a889-666ba63095aa" target="_blank" rel="noopener">View publication</a></div>
       </div>
     </div>
@@ -416,14 +417,14 @@
     <div class="modal-dialog">
       <div class="modal-header"><h3>MSc – Sales Analytics & Forecasting</h3><button class="close" data-close>Close</button></div>
       <div class="modal-body">
-        <p>Hybrid architecture combining on‑prem extraction from SAP Business One with cloud processing on <strong>Google Cloud Functions</strong> and consolidation in <strong>BigQuery</strong>. Automated ETL, feature engineering, and time‑series forecasting that feed <strong>Power BI</strong> dashboards for stakeholders. Prototype apps built with <strong>Streamlit</strong> for rapid exploration.</p>
-        <div class="chips"><span class="chip">GCP</span><span class="chip">BigQuery</span><span class="chip">Python</span><span class="chip">ETL</span><span class="chip">Power BI</span></div>
+        <p>Hybrid architecture combining extraction from SAP Business One with cloud processing on <strong>Google Cloud Functions</strong> and consolidation in <strong>BigQuery</strong>. The system automated ETL, feature engineering, time-series forecasting, and Power BI dashboards for operational and strategic decision-making.</p>
+        <div class="chips"><span class="chip">GCP</span><span class="chip">Cloud Functions</span><span class="chip">BigQuery</span><span class="chip">Python</span><span class="chip">Forecasting</span><span class="chip">Power BI</span></div>
         <h4 style="margin-top:16px">Results & Impact</h4>
         <ul class="list">
-          <li><strong>Demand forecast accuracy:</strong> +35.2% improvement on key SKUs (reducing overstock & stockouts).</li>
-          <li><strong>Time saved:</strong> reporting cut from <strong>3 days</strong> to <strong>15 minutes</strong>.</li>
-          <li><strong>Estimated monthly benefit:</strong> ≈ <strong>$2,970 USD</strong>.</li>
-          <li><strong>Cloud costs:</strong> GCP <strong>$13–$23</strong>/mo + Power BI Pro <strong>$10</strong>/mo.</li>
+          <li><strong>Forecasting accuracy:</strong> +35.2% improvement on key SKUs.</li>
+          <li><strong>Reporting workflow:</strong> reduced from <strong>3 days</strong> to <strong>15 minutes</strong>.</li>
+          <li><strong>Estimated monthly benefit:</strong> approximately <strong>$2,970 USD</strong>.</li>
+          <li><strong>Cloud costs:</strong> approximately <strong>$13–$23</strong>/month on GCP plus Power BI Pro licensing.</li>
         </ul>
         <div class="project-actions" style="margin-top:12px;"><a class="btn" href="https://www.canva.com/design/DAGmVKqEmKA/ZElebnMum3HzNw6chTGBQw/edit?utm_content=DAGmVKqEmKA&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" rel="noopener">Presentation</a></div>
       </div>
@@ -432,10 +433,10 @@
 
   <div class="modal" id="modal-cv">
     <div class="modal-dialog">
-      <div class="modal-header"><h3>Computer‑Vision Pipelines – YOLOv8 / DETR + 3D LAZ</h3><button class="close" data-close>Close</button></div>
+      <div class="modal-header"><h3>Computer Vision Pipelines – YOLOv8 / DETR + 3D LAZ</h3><button class="close" data-close>Close</button></div>
       <div class="modal-body">
-        <p>End‑to‑end CV system for power‑infrastructure imagery: dataset curation, labeling guidelines, training loops (YOLOv8/DETR), and cloud inference on <strong>AWS Fargate</strong> with Roboflow integration. Complemented by <strong>LAZ point‑cloud</strong> clustering and 3D visualization to estimate heights and support asset management.</p>
-        <h4 style="margin:12px 0 8px;display:flex;align-items:center;gap:8px">Metrics <span title="Test set, industry‑standard IoU threshold 0.5" style="font-size:12px;color:var(--muted);">(Test set)</span></h4>
+        <p>End-to-end computer vision system for electrical infrastructure imagery: dataset strategy, labeling guidelines, model training with YOLOv8 and DETR, evaluation, and real-time cloud inference on <strong>AWS Fargate</strong> through Django APIs. The workflow was complemented by <strong>LAZ point-cloud clustering</strong> and 3D visualization for structural analytics and asset mapping.</p>
+        <h4 style="margin:12px 0 8px;display:flex;align-items:center;gap:8px">Metrics <span title="Test set, IoU threshold 0.5" style="font-size:12px;color:var(--muted);">(Test set)</span></h4>
         <div class="metrics">
           <div class="metric">
             <h5>mAP@50</h5>
@@ -453,7 +454,7 @@
             <div class="val">69.6%</div>
           </div>
         </div>
-        <div class="chips" style="margin-top:12px"><span class="chip">Python</span><span class="chip">YOLOv8</span><span class="chip">DETR</span><span class="chip">AWS</span><span class="chip">FastAPI</span><span class="chip">3D/LAZ</span></div>
+        <div class="chips" style="margin-top:12px"><span class="chip">Python</span><span class="chip">YOLOv8</span><span class="chip">DETR</span><span class="chip">AWS Fargate</span><span class="chip">Django APIs</span><span class="chip">Roboflow</span><span class="chip">3D LAZ</span></div>
       </div>
     </div>
   </div>
@@ -462,8 +463,8 @@
     <div class="modal-dialog">
       <div class="modal-header"><h3>Clinical RAG Platform</h3><button class="close" data-close>Close</button></div>
       <div class="modal-body">
-        <p>Unified ingestion for audio (faster‑whisper), PDF (pdfplumber), and images (EasyOCR). Entity extraction via LLM with regex fallback, embeddings stored in <strong>Chroma</strong>, JWT‑based multi‑role auth, and a <strong>Streamlit</strong> client. Deployed as multi‑arch images with Docker.</p>
-        <div class="chips"><span class="chip">FastAPI</span><span class="chip">Whisper</span><span class="chip">EasyOCR</span><span class="chip">Chroma</span><span class="chip">Docker</span></div>
+        <p>Retrieval-Augmented Generation platform for multimodal clinical data. The system supports audio transcription with faster-whisper, PDF ingestion with pdfplumber, OCR with EasyOCR, entity extraction, embeddings stored in <strong>Chroma</strong>, JWT-secured multi-role access, and a Streamlit client. It was packaged using Docker for reproducible deployment.</p>
+        <div class="chips"><span class="chip">FastAPI</span><span class="chip">Whisper</span><span class="chip">EasyOCR</span><span class="chip">pdfplumber</span><span class="chip">Chroma</span><span class="chip">JWT</span><span class="chip">Docker</span></div>
         <div class="project-actions" style="margin-top:12px;"><a class="btn" href="https://github.com/jacespedes2019/ElSol-Challenge" target="_blank" rel="noopener">GitHub</a></div>
       </div>
     </div>
@@ -471,16 +472,16 @@
 
   <div class="modal" id="modal-cop16">
     <div class="modal-dialog">
-      <div class="modal-header"><h3>COP16 Official App (MinTIC Colombia)</h3><button class="close" data-close>Close</button></div>
+      <div class="modal-header"><h3>COP16 Official App – MinTIC Colombia</h3><button class="close" data-close>Close</button></div>
       <div class="modal-body">
-        <p>Worked within a cross‑functional team to ship the official COP16 mobile app. Implemented schedule, content, and notification modules, focusing on performance, offline‑first UX, and CI/CD stability for Android/iOS releases.</p>
+        <p>Worked within a cross-functional software team to ship the official COP16 mobile application for Colombia's Ministry of ICT. Implemented agenda, content, notification, and offline-first modules, with attention to performance and release stability for Android and iOS.</p>
         <h4 style="margin:12px 0 8px">Product Metrics</h4>
         <ul class="list">
-          <li><strong>Store rating:</strong> 4.7★ (51 reviews).</li>
+          <li><strong>Store rating:</strong> 4.7★.</li>
           <li><strong>Downloads:</strong> 1K+ on Google Play.</li>
-          <li><strong>Delivery time:</strong> ~2 months development with coordinated sprints.</li>
+          <li><strong>Delivery time:</strong> approximately 2 months of coordinated development.</li>
         </ul>
-        <div class="chips"><span class="chip">Flutter</span><span class="chip">Dart</span><span class="chip">Android/iOS</span></div>
+        <div class="chips"><span class="chip">Flutter</span><span class="chip">Dart</span><span class="chip">Android</span><span class="chip">iOS</span><span class="chip">Offline-first UX</span></div>
         <div class="project-actions" style="margin-top:12px;"><a class="btn" href="https://play.google.com/store/apps/details?id=co.gov.mintic.cop162024&hl=es_CO&pli=1" target="_blank" rel="noopener">Play Store</a></div>
       </div>
     </div>
@@ -488,22 +489,11 @@
 
   <div class="modal" id="modal-arapp">
     <div class="modal-dialog">
-      <div class="modal-header"><h3>ARApp – Android AR (TFLite)</h3><button class="close" data-close>Close</button></div>
+      <div class="modal-header"><h3>ARApp – Android AR + TFLite</h3><button class="close" data-close>Close</button></div>
       <div class="modal-body">
-        <p>MVVM Android application integrating <strong>ARCore/Sceneform</strong> and on‑device detection with <strong>TFLite (SSD‑MobileNet)</strong>. Implements a single interactive 3D cube (gyro‑driven rotation, color picker), robust error handling, and >80% unit test coverage.</p>
-        <div class="chips"><span class="chip">Kotlin</span><span class="chip">MVVM</span><span class="chip">ARCore</span><span class="chip">TFLite</span></div>
+        <p>MVVM Android application integrating <strong>ARCore/Sceneform</strong> and on-device detection with <strong>TFLite SSD-MobileNet</strong>. Includes an interactive 3D cube, gyro-driven rotation, color picker, robust error handling, and unit test coverage.</p>
+        <div class="chips"><span class="chip">Kotlin</span><span class="chip">MVVM</span><span class="chip">ARCore</span><span class="chip">Sceneform</span><span class="chip">TFLite</span></div>
         <div class="project-actions" style="margin-top:12px;"><a class="btn" href="https://github.com/jacespedes2019/arapp" target="_blank" rel="noopener">GitHub</a></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal" id="modal-tutorya">
-    <div class="modal-dialog">
-      <div class="modal-header"><h3>TutorYa – Flutter</h3><button class="close" data-close>Close</button></div>
-      <div class="modal-body">
-        <p>Matching platform connecting students and tutors. Android project structure plus a research wiki documenting product scope, UX flows, and architecture rationale.</p>
-        <div class="chips"><span class="chip">Flutter</span><span class="chip">Dart</span><span class="chip">Android</span></div>
-        <div class="project-actions" style="margin-top:12px;"><a class="btn" href="https://gitlab.com/isis3510_202310_35/flutter/-/tree/main/tutorya/android/app/src?ref_type=heads" target="_blank" rel="noopener">GitLab</a><a class="btn" href="https://gitlab.com/isis3510_202310_35/wiki" target="_blank" rel="noopener">Wiki</a></div>
       </div>
     </div>
   </div>
@@ -519,7 +509,7 @@
       localStorage.setItem('theme', next);
     });
 
-    // Modals
+    // Modal behavior
     const openers = document.querySelectorAll('[data-open]');
     const closers = document.querySelectorAll('[data-close]');
     const modals = document.querySelectorAll('.modal');
