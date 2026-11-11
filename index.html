@@ -173,7 +173,7 @@
     .section-title { margin: 0 0 20px; font-size: clamp(1.85rem, 4vw, 3.1rem); letter-spacing: -.055em; }
     .grid, .projects-grid { display: grid; gap: 16px; }
     .grid.cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .grid.cols-3, .projects-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .projects-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
     .card, .item, .project-card {
       min-width: 0;
       background: var(--panel);
@@ -301,7 +301,7 @@
     @media (max-width: 680px) {
       .nav { gap: 12px; }
       .nav .links { gap: 6px 12px; }
-      .hero-grid, .grid.cols-2, .grid.cols-3, #about .grid, .contact { grid-template-columns: 1fr; }
+      .hero-grid, .grid.cols-2, #about .grid, .contact { grid-template-columns: 1fr; }
       .hero-photo { width: min(100%, 370px); aspect-ratio: 4 / 3; object-position: center top; }
       .impact-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .impact:nth-child(3) { border-inline-start: 0; }
@@ -340,7 +340,7 @@
           <a href="#skills">Skills</a>
           <a href="#certs">Certifications</a>
           <a href="#contact">Contact</a>
-          <button class="theme-toggle" id="themeBtn" aria-pressed="false">Dark mode</button>
+          <button class="theme-toggle" id="themeBtn">Dark mode</button>
         </div>
       </nav>
 
@@ -409,6 +409,18 @@
               </div>
             </div>
           </div>
+
+          <article class="project-card" id="quickly">
+            <div class="badge"><strong>3rd Place</strong> · Intuit Challenge</div>
+            <img class="thumb" src="images/quickly.jpeg" alt="QuickLy team members on stage beside the slide announcing their third-place finish" loading="lazy" decoding="async">
+            <div class="content">
+              <h3>QuickLy – AI for Accounting</h3>
+              <p>Built with my team at the 2026 LA Hacks AI Hackathon at UCLA. QuickLy turns plain-English rules into automated checks that flag accounting transactions and route cases to the right reviewer.</p>
+              <div class="project-actions">
+                <a class="btn" href="https://devpost.com/software/quickly-smqibr" target="_blank" rel="noopener">View on Devpost</a>
+              </div>
+            </div>
+          </article>
 
           <!-- MSc Project -->
           <div class="project-card" data-modal="modal-msc">
@@ -561,7 +573,12 @@
     <section id="awards">
       <div class="container">
         <h2 class="section-title">Awards</h2>
-        <div class="grid cols-3">
+        <div class="grid cols-2">
+          <div class="item">
+            <h3>3rd Place – Intuit Challenge</h3>
+            <div class="meta">LA Hacks AI Hackathon · UCLA · October 2026</div>
+            <p>Team award for <a href="#quickly">QuickLy</a>, an AI prototype for reviewing accounting transactions.</p>
+          </div>
           <div class="item">
             <h3>Cum Laude Distinction – Systems Engineering</h3>
             <div class="meta">Universidad de los Andes · April 2024</div>
@@ -719,7 +736,7 @@
 
     function applyTheme(theme) {
       document.documentElement.dataset.theme = theme;
-      themeButton.setAttribute('aria-pressed', String(theme === 'dark'));
+      themeButton.textContent = theme === 'dark' ? 'Light mode' : 'Dark mode';
     }
 
     try {
